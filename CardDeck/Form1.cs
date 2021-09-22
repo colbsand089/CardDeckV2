@@ -14,6 +14,9 @@ namespace CardDeck
     {
         //standard deck of cards
         List<string> deck = new List<string>();
+        List<string> playerDeck = new List<string>();
+        List<string> dealerDeck = new List<string>();
+
 
         public Form1()
         {
@@ -26,6 +29,16 @@ namespace CardDeck
             deck.AddRange(new string[] { "2D", "3D", "4D", "5D", "6D", "7D", "8D", "9D", "10D", "JD", "QD", "KD", "AD" });
             deck.AddRange(new string[] { "2C", "3C", "4C", "5C", "6C", "7C", "8C", "9C", "10C", "JC", "QC", "KC", "AC" });
             deck.AddRange(new string[] { "2S", "3S", "4S", "5S", "6S", "7S", "8S", "9S", "10S", "JS", "QS", "KS", "AS" });
+            
+            dealButton.Enabled = false;
+            collectButton.Enabled = false;
+
+           
+            dealButton.BackColor = Color.White; 
+            collectButton.BackColor = Color.White;
+            
+           
+
 
             ShowDeck();
         }
@@ -34,6 +47,15 @@ namespace CardDeck
         {
             ///Clear the showLabel and then use a loop to display all
             ///the cards that are currently in the main deck
+            showLabel.Text = "";
+            
+            for (int i = 0; i < deck.Count; i++)
+
+            {
+
+                showLabel.Text += " " + deck[i];
+
+            }
         }
 
         private void shuffleButton_Click(object sender, EventArgs e)
@@ -49,7 +71,8 @@ namespace CardDeck
             }
 
             deck = deckTemp;
-
+            dealButton.Enabled = true;
+            dealButton.BackColor = Color.GreenYellow;
             ShowDeck();
         }
 
@@ -63,6 +86,24 @@ namespace CardDeck
             ///deck list, and then removes that card from the deck list.
             ///
             ///Run the ShowDeck() method
+            
+            for (int i = 0; i < 5; i++)
+
+            {
+                playerDeck.Add(deck[0]);
+                deck.RemoveAt(0);   
+
+                playerCardsLabel.Text += " " + playerDeck[i];
+
+                dealerDeck.Add(deck[0]);
+                deck.RemoveAt(0);   
+
+                dealerCardsLabel.Text += " " + dealerDeck[i];
+                collectButton.Enabled = true;   
+                
+            }
+            collectButton.BackColor = Color.GreenYellow;
+            ShowDeck();
         }
 
         private void collectButton_Click(object sender, EventArgs e)
@@ -73,6 +114,22 @@ namespace CardDeck
             ///those cards back to the deck list. 
             ///            
             ///Run the ShowDeck() method
+            deck.AddRange(dealerDeck);
+
+            dealerDeck.Clear();
+
+            dealerCardsLabel.Text = "";
+           
+            deck.AddRange(playerDeck);
+
+            playerDeck.Clear();
+
+            playerCardsLabel.Text = "";
+
+
+
+            ShowDeck();
+
         }
     }
 }

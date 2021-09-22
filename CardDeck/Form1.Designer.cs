@@ -47,7 +47,7 @@ namespace CardDeck
             this.shuffleButton.BackColor = System.Drawing.Color.GreenYellow;
             this.shuffleButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.shuffleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.shuffleButton.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.shuffleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.shuffleButton.ForeColor = System.Drawing.Color.Black;
             this.shuffleButton.Location = new System.Drawing.Point(24, 12);
             this.shuffleButton.Name = "shuffleButton";
@@ -62,7 +62,7 @@ namespace CardDeck
             this.dealButton.BackColor = System.Drawing.Color.GreenYellow;
             this.dealButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.dealButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dealButton.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dealButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dealButton.ForeColor = System.Drawing.Color.Black;
             this.dealButton.Location = new System.Drawing.Point(24, 65);
             this.dealButton.Name = "dealButton";
@@ -99,7 +99,7 @@ namespace CardDeck
             this.collectButton.BackColor = System.Drawing.Color.GreenYellow;
             this.collectButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.collectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.collectButton.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.collectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.collectButton.ForeColor = System.Drawing.Color.Black;
             this.collectButton.Location = new System.Drawing.Point(24, 118);
             this.collectButton.Name = "collectButton";
@@ -137,7 +137,7 @@ namespace CardDeck
             this.availableBox.ForeColor = System.Drawing.Color.White;
             this.availableBox.Location = new System.Drawing.Point(12, 185);
             this.availableBox.Name = "availableBox";
-            this.availableBox.Size = new System.Drawing.Size(424, 108);
+            this.availableBox.Size = new System.Drawing.Size(453, 130);
             this.availableBox.TabIndex = 12;
             this.availableBox.TabStop = false;
             this.availableBox.Text = "Available Current Cards in Main Deck";
@@ -148,7 +148,7 @@ namespace CardDeck
             this.showLabel.ForeColor = System.Drawing.Color.White;
             this.showLabel.Location = new System.Drawing.Point(12, 24);
             this.showLabel.Name = "showLabel";
-            this.showLabel.Size = new System.Drawing.Size(396, 67);
+            this.showLabel.Size = new System.Drawing.Size(435, 91);
             this.showLabel.TabIndex = 6;
             this.showLabel.Text = "--";
             // 
@@ -157,7 +157,7 @@ namespace CardDeck
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
-            this.ClientSize = new System.Drawing.Size(451, 313);
+            this.ClientSize = new System.Drawing.Size(477, 337);
             this.Controls.Add(this.availableBox);
             this.Controls.Add(this.playerLabel);
             this.Controls.Add(this.dealerLabel);
