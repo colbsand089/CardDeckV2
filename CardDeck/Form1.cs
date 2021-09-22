@@ -93,7 +93,7 @@ namespace CardDeck
                 playerDeck.Add(deck[0]);
                 deck.RemoveAt(0);   
 
-                playerCardsLabel.Text += " " + playerDeck[i];
+                playerCardsLabel.Text += " " + playerDeck[i]; //
 
                 dealerDeck.Add(deck[0]);
                 deck.RemoveAt(0);   
